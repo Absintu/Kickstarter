@@ -1,6 +1,6 @@
 pragma solidity ^0.5.16;
 
-contract CampaignFactory{
+  contract  CampaignFactory{
   address[] public deployedCampaigns;
   function createCampaign(uint minimum) public{
     address newCampaign = address(new Campaign(minimum, msg.sender));
