@@ -4,9 +4,9 @@ import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MetaCoin.sol";
 
-contract Campaign {
+contract TestCampaign {
 
-  function testInitialBalanceUsingDeployedContract() public {
+/*  function testInitialBalanceUsingDeployedContract() public {
     MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
 
     uint expected = 10000;
@@ -21,5 +21,5 @@ contract Campaign {
 
     Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 MetaCoin initially");
   }
-
+*/
 }

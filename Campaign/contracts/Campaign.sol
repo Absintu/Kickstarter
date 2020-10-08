@@ -2,13 +2,12 @@ pragma solidity ^0.5.16;
 
 contract CampaignFactory{
   address[] public deployedCampaigns;
-  function createCampaign(uint minimum){
-    address newCampaign = new Campaign(minimum, msg.sender);
+  function createCampaign(uint minimum) public{
+    address newCampaign = address(new Campaign(minimum, msg.sender));
     deployedCampaigns.push(newCampaign);
   }
-  function getDeployedCampaigns public view returns (address[]){
+  function getDeployedCampaigns() public view returns (address[] memory){
     return deployedCampaigns;
-  }
   }
 }
 
@@ -16,7 +15,7 @@ contract Campaign{
   struct Request{
     string description;
     uint value;
-    address recipient;
+    address payable recipient;
     bool complete;
     uint approvalCount;
     mapping(address => bool) approvals;
@@ -40,7 +39,7 @@ contract Campaign{
     approvers[msg.sender] = true;
     approversCount++;
   }
-  function createRequest(string memory description, uint value, address recipient) public restricted(){
+  function createRequest(string memory description, uint value, address payable recipient) public restricted(){
     Request memory newRequest = Request({
       description: description,
       value: value,
@@ -62,6 +61,6 @@ contract Campaign{
     require(request.approvalCount > (approversCount / 2));
     require(!request.complete);
     request.recipient.transfer(request.value);
-    request=true;
+    request.complete=true;
   }
 }
