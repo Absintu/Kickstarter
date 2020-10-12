@@ -27,10 +27,14 @@ class CampaignIndex  extends Component{
         return( 
             <Layout>
             <div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
                 <h3>Open Campaigns</h3>
-                {this.renderCampaigns()}
-                <Button content="Create Campaign" icon="add circle" primary/>
+                <Button
+                    floated="right"
+                    content="Create Campaign"
+                    icon="add circle"
+                    primary
+                />
+            {this.renderCampaigns()}
             </div>
             </Layout>
         );

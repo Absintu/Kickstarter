@@ -1,12 +1,16 @@
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 import React from 'react'
+import {Container} from 'semantic-ui-react'
+import Header from './Header'
+import Head from 'next/head'
 
 export default props => {
     return (
-        <div>
-            <h1>I'm a header</h1>
+        <Container>
+            <Head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+            </Head>
+            <Header/>
             {props.children}
-            <h1>I'm a footer</h1>
-        </div>
+        </Container>
     );
 };
