@@ -6,6 +6,7 @@ if(typeof window !== 'undefined' && window.web3 !== 'undefined') {
     // We are in the browser and metamask is running.
     web3= new Web3(window.web3.currentProvider);
     console.log('We are in the browser and metamask is running.');
+    window.ethereum.enable();
 } else if (typeof window !== 'undefined'){
     try {
         window.ethereum.enable().then(function() {

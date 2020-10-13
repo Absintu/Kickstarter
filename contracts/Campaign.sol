@@ -1,6 +1,6 @@
 pragma solidity ^0.5.16;
 
-  contract  CampaignFactory{
+contract  CampaignFactory{
   address[] public deployedCampaigns;
   function createCampaign(uint minimum) public{
     address newCampaign = address(new Campaign(minimum, msg.sender));
@@ -62,5 +62,21 @@ contract Campaign{
     require(!request.complete);
     request.recipient.transfer(request.value);
     request.complete=true;
+  }
+
+  function getSummary() public view returns(
+    uint, uint, uint, uint, address
+  ){
+    return(
+      minimumContribution,
+      address(this).balance,
+      requests.length,
+      approversCount,
+      manager
+    );
+  }
+
+  function getRequestsCount() public view returns(uint){
+    return requests.length;
   }
 }
