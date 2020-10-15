@@ -1,7 +1,7 @@
 # Kickstarter
 
-Kickstarter campaign adaptation from Udemy course
-This is an Ethereum project that resolves the known Kickstarter website issues.
+Kickstarter campaign adaptation from Udemy course\
+This is an Ethereum project that resolves the known Kickstarter website issues.\
 The manager of the campaign starts a new Campaign and assings a minimum contribution. After that
 anyone with a wallet can contribute to this campaign.
 
