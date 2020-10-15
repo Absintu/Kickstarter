@@ -10,7 +10,7 @@ Then the "Approvers" (people that donated) vote for all the requests pending. If
 has more than 50% of vote, then the recipient gets those Ethi Ethi.
 
 If you want to test this app:\
-git clone https://github.com/Absintu/Kickstarter\
+git clone https://github.com/Absintu/Kickstarter \
 cd Kickstarter/\
 npm run dev
 
