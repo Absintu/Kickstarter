@@ -15,6 +15,5 @@ cd Kickstarter/\
 npm run dev
 
 Absintu out!\
-Twitter: https://twitter.com/absintu2\
-Eth: 0x131d43FB57d25eBbF38DF1C1CC500F1D8fed5d29\
-
+Twitter: https://twitter.com/absintu2 \
+Eth: 0x131d43FB57d25eBbF38DF1C1CC500F1D8fed5d29 
