@@ -6,10 +6,9 @@ import Head from 'next/head'
 export default props => {
     return (
         <Container>
-            <Head>
+            <Header>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
-            </Head>
-            <Header/>
+            </Header>
             {props.children}
         </Container>
     );
